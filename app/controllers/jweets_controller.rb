@@ -1,5 +1,6 @@
 class JweetsController < ApplicationController
   def index
+    @jweets = Jweet.all
   end
   def new
     @jweet = Jweet.new
