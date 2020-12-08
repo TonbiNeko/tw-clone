@@ -6,6 +6,10 @@
 <% @jweets.each do |jweet| %>
   <tr>
     <td><%= jweet.content %></td>
+    <td><%= link_to '投稿確認', new_jweet_path %></td>
+    <td><%= link_to '編集', new_jweet_path %></td>
+    <td><%= link_to '削除', new_jweet_path %></td>
   </tr>
 <% end %>
 </table>
+<%= link_to 'new Jweet', new_jweet_path %>
