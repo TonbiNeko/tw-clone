@@ -1,0 +1,9 @@
+<%= form_with(model: @jweet, local: true) do |form| %>
+  <div class="jweet_content">
+    <%= form.label :content %>
+  </div>
+  <div>
+    <%= form.text_area :content, size: "20x7", maxlength: 140 %>
+  </div>
+  <%= form.submit %>
+<% end %>
