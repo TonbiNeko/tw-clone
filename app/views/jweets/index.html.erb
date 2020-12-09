@@ -1,15 +1,36 @@
-<h1>Jweets</h1>
-<table>
-  <tr>
-    <th>Contents</th>
-  </tr>
-<% @jweets.each do |jweet| %>
-  <tr>
-    <td><%= jweet.content %></td>
-    <td><%= link_to '投稿確認', jweet_path(jweet.id) %></td>
-    <td><%= link_to '編集', edit_jweet_path(jweet.id) %></td>
-    <td><%= link_to '削除', jweet_path(jweet.id), method: :delete,data: { confirm: 'Are you sure to delete this post?' } %></td>
-  </tr>
-<% end %>
-</table>
-<%= link_to 'new Jweet', new_jweet_path %>
+<body>
+  <header>
+    <h1 class="title">Jweets</h1>
+    <ul>
+      <li><%= link_to 'new Jweet', new_jweet_path %></li>
+      <li><a href="#">account</a></li>
+      <li><a href="#">setting</a></li>
+    </ul>
+    </header>
+    <div id=notice>
+      <%= notice %>
+    </div>
+    <table>
+      <tr>
+        <th>Contents</th>
+      </tr>
+      <% @jweets.each do |jweet| %>
+      <tr>
+        <td class="menu"><%= jweet.content %></td>
+      </tr>
+      <tr>
+        <td><%= link_to '投稿確認', jweet_path(jweet.id) %></td>
+      </tr>
+      <tr>
+        <td><%= link_to '編集', edit_jweet_path(jweet.id) %></td>
+      </tr>
+      <tr>
+        <td><%= link_to '削除', jweet_path(jweet.id), method: :delete,data: { confirm: 'Are you sure to delete this post?' } %></td>
+      </tr>
+      <% end %>
+    </table>
+  <footer>
+    <p>Jweets! by TonbiNeko.</p>
+  </footer>
+</body>
+

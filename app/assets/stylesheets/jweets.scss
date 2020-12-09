@@ -1,3 +1,58 @@
-// Place all the styles related to the jweets controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  width:900px;
+  margin-right: auto;
+  margin-left : auto;
+  background-color: rgb(207, 202, 153);
+  color: white;
+}
+h1 {
+  text-align: center;
+  width: 420px; 
+  background-color: rgb(155, 213, 240);
+  padding: 10px;
+  margin-left: 30px;
+}
+li {
+  list-style: none;
+  display: inline;
+  padding: 15px;
+}
+header {
+  background-color: rgb(98, 99, 96);
+  display: flex;
+  height: 130px;
+  align-items: center;
+}
+h2 {
+text-align: center;
+color: aquamarine;
+}
+#error_explanation {
+  color: rgb(236, 41, 41);
+}
+#error_msg {
+  color: rgb(236, 41, 41);
+}
+.jweet_content {
+  text-align: center;
+}
+#notice {
+  text-align: center;
+  height: 40px;
+  padding-top: 20px;
+  font-size: 1.5rem;
+}
+li {
+  list-style: none;
+  display: inline;
+  padding: 10px;
+}
+footer {
+  background-color: rgb(98, 99, 96);
+  height: 50px;
+  font-size: 0.8rem;
+  text-align: center;
+}
+p {
+  padding-top: 15px;
+}

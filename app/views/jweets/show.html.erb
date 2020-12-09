@@ -1,3 +1,19 @@
-<h1>Jweet</h1>
-<p>Content: <%= @jweet.content %></p>
-<%= link_to 'Back to index page', jweets_path %>
+<body>
+  <header>
+    <h1 class="title">Jweets</h1>
+    <ul>
+      <li><%= link_to 'new Jweet', new_jweet_path %></li>
+      <li><a href="#">account</a></li>
+      <li><a href="#">setting</a></li>
+    </ul>
+  </header>
+  <div class="jweet_content">
+    <h2>Content</h2>
+    <br>
+    <p><%= @jweet.content %></p>
+    <%= link_to 'Back to index page', jweets_path %>
+  </div>
+  <footer>
+    <p>Jweets! by TonbiNeko.</p>
+  </footer>
+</body>
