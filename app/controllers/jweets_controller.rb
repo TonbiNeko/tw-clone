@@ -1,5 +1,5 @@
 class JweetsController < ApplicationController
-  before_action :set_jweet, only: [:show, :edit]
+  before_action :set_jweet, only: [:show, :edit, :update]
   def index
     @jweets = Jweet.all
   end
@@ -13,6 +13,13 @@ class JweetsController < ApplicationController
   def show
   end
   def edit
+  end
+  def update
+    if @jweet.update(jweet_params)
+      redirect_to jweet_path, notice: "edited your post"
+    else
+      render :edit
+    end
   end
   private
   def jweet_params
