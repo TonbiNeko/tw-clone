@@ -35,6 +35,7 @@ class JweetsController < ApplicationController
   end
   def confirm
     @jweet = Jweet.new(jweet_params)
+    render :new if @jweet.invalid?
   end
   private
   def jweet_params
