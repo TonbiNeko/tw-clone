@@ -1,5 +1,5 @@
 class JweetsController < ApplicationController
-  before_action :set_jweet, only: [:show, :edit, :update]
+  before_action :set_jweet, only: [:show, :edit, :update, :destroy]
   def index
     @jweets = Jweet.all
   end
@@ -20,6 +20,10 @@ class JweetsController < ApplicationController
     else
       render :edit
     end
+  end
+  def destroy
+    @jweet.destroy
+    redirect_to jweets_path, notice:"Deleted your post"
   end
   private
   def jweet_params
