@@ -25,6 +25,9 @@ class JweetsController < ApplicationController
     @jweet.destroy
     redirect_to jweets_path, notice:"Deleted your post"
   end
+  def confirm
+    @jweet = Jweet.new(jweet_params)
+  end
   private
   def jweet_params
     params.require(:jweet).permit(:content)
