@@ -7,8 +7,16 @@ class JweetsController < ApplicationController
     @jweet = Jweet.new
   end
   def create
-    Jweet.create(jweet_params)
-    redirect_to new_jweet_path
+    @jweet = Jweet.new(jweet_params)
+    if params[:back]
+      render :new
+    else
+      if @jweet.save
+        redirect_to jweets_path, notice: "Created new Jweet!"
+      else
+        render :new
+      end
+    end
   end
   def show
   end
